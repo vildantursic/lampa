@@ -6,7 +6,21 @@ export default class Register extends Component {
     render() {
         return (
             <View style={styles.register}>
+                <View style={styles.logoContainer}>
+                    <Image style={styles.logo}
+                           source={require('../../images/walter-logo.png')}/>
+                </View>
                 <Text style={styles.header}>Register</Text>
+                <View style={styles.social}>
+                    <TouchableOpacity style={styles.buttongmail}>
+                        <Image style={styles.logo}
+                               source={require('../../images/walter-logo.png')}/>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.buttonfb}>
+                        <Image style={styles.logo}
+                               source={require('../../images/walter-logo.png')}/>
+                    </TouchableOpacity>
+                </View>
                 <TextInput style={styles.textInput} placeholder="Name" underlineColorAndroid={'transparent'}/>
                 <TextInput style={styles.textInput} placeholder="Email" underlineColorAndroid={'transparent'}/>
                 <TextInput style={styles.textInput} placeholder="Password" underlineColorAndroid={'transparent'}/>
@@ -21,7 +35,7 @@ const styles = StyleSheet.create({
     register: {
         padding: 20,
         alignSelf: 'stretch',
-        backgroundColor: '#ff2f2e'
+        backgroundColor: '#ff3d47'
     },
     header: {
         textAlignVertical: 'top',
@@ -46,9 +60,25 @@ const styles = StyleSheet.create({
         marginTop: 20,
         alignItems: 'center',
         justifyContent: 'center',
+        opacity: 0.4,
     },
     buttonText: {
         textAlign: 'center',
         fontWeight: '700',
+        color: '#ffffff',
     },
+    logoContainer: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexGrow: 1,
+    },
+    logo: {
+        width: 80,
+        height: 80,
+    },
+    social:{
+        flexDirection: 'row',
+    },
+    buttongmail:{},
+    buttonfb:{},
 });
