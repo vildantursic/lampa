@@ -1,12 +1,13 @@
 import React from 'react';
 import { StyleSheet, View, } from 'react-native';
 import Login from './src/components/Login/Login.js';
+import Register from './src/components/Register/Register.js';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Login></Login>
+        <Register></Register>
       </View>
     );
   }
@@ -15,7 +16,6 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#5794ff',
     alignItems: 'center',
     justifyContent: 'center',
   },

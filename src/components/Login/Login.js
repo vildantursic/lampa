@@ -9,22 +9,25 @@ export default class Login extends Component {
                     <Image style={styles.logo}
                            source={require('../../images/walter-logo.png')}/>
                     <Text style={styles.title}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
+                </View>
                     <TouchableOpacity style={styles.buttonContainer}>
                         <Text style={styles.buttonText}>REGISTER</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.buttonContainer}>
                         <Text style={styles.buttonText}>LOGIN</Text>
                     </TouchableOpacity>
-                </View>
+                <Text style={styles.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </Text>
             </View>
         );
     }
 }
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#5794ff',
+        backgroundColor: '#7fb8ff',
+        padding: 20,
     },
     logoContainer: {
         alignItems: 'center',
@@ -43,9 +46,22 @@ const styles = StyleSheet.create({
         opacity: 0.9,
     },
     buttonContainer: {
-
+        height: 60,
+        backgroundColor: 'transparent',
+        borderWidth: 2,
+        borderColor: '#ffffff',
+        borderRadius: 4,
+        marginBottom: 20,
+        justifyContent: 'center',
     },
     buttonText: {
-
-    }
+        textAlign: 'center',
+        color: '#ffffff',
+        fontWeight: '700',
+    },
+    description:{
+        textAlign: 'left',
+        color: '#ffffff',
+        paddingVertical: 10,
+}
 });
